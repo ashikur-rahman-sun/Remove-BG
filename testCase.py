@@ -67,8 +67,8 @@ try:
         "udid": device_info["deviceId"],
         "platformVersion": device_info["platformVersion"],
         "app": "F:/Background-Remover-FollowPath/BG Remover v1.0.5_d3.apk",
-        "appPackage": "com.braincraftapps.droid.bgremover",
-        "appActivity": "com.braincraftapps.droid.bgremover.ui.activity.launcher.LauncherActivity",
+        "appPackage": "com._______.droid.bgremover",
+        "appActivity": "com._______.droid.bgremover.ui.activity.launcher.LauncherActivity",
         "automationName": "UiAutomator2",
         "autoGrantPermissions": True,
         "noReset": False
@@ -101,7 +101,7 @@ try:
 
     try:
         gallery_btn = WebDriverWait(driver, 5).until(
-            EC.element_to_be_clickable((AppiumBy.ID, 'com.braincraftapps.droid.bgremover:id/gallery_button_linear_layout'))
+            EC.element_to_be_clickable((AppiumBy.ID, 'com._______.droid.bgremover:id/gallery_button_linear_layout'))
         )
         gallery_btn.click()
         print("Clicked Gallery Button")
@@ -165,7 +165,7 @@ try:
         driver.save_screenshot("before_swipe.png")
         print("Screenshot taken before swipe.")
         # Swipe the bottom navigation bar to bring the Shape Button into view
-        bottom_nav = driver.find_element(AppiumBy.ID, 'com.braincraftapps.droid.bgremover:id/bottom_nav')
+        bottom_nav = driver.find_element(AppiumBy.ID, 'com._______.droid.bgremover:id/bottom_nav')
         location = bottom_nav.location
         size = bottom_nav.size
         start_x = location['x'] + size['width'] - 10
@@ -179,7 +179,7 @@ try:
         print("Screenshot taken after swipe.")
         # Now try to click the Shape Button
         shape_btn = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((AppiumBy.ID, 'com.braincraftapps.droid.bgremover:id/shape_nav_button'))
+            EC.element_to_be_clickable((AppiumBy.ID, 'com._______.droid.bgremover:id/shape_nav_button'))
         )
         shape_btn.click()
         print("Successfully clicked Shape Button")
@@ -200,7 +200,7 @@ try:
     '''Step 3: Click on the Heart Shape'''
     try: 
         heart_shape_btn = WebDriverWait(driver, 15).until(
-            EC.element_to_be_clickable((AppiumBy.XPATH, '(//android.widget.ImageButton[@resource-id="com.braincraftapps.droid.bgremover:id/image_button"])[3]'))
+            EC.element_to_be_clickable((AppiumBy.XPATH, '(//android.widget.ImageButton[@resource-id="com._______.droid.bgremover:id/image_button"])[3]'))
         )
         heart_shape_btn.click()
         print("Successfully clicked Heart Shape")
@@ -210,7 +210,7 @@ try:
     '''Step 4: Click Done Button'''
     try:
         done_btn = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((AppiumBy.ID, 'com.braincraftapps.droid.bgremover:id/done_button'))
+            EC.element_to_be_clickable((AppiumBy.ID, 'com._______.droid.bgremover:id/done_button'))
         )
         done_btn.click()
         print("Successfully clicked Done button")
@@ -220,7 +220,7 @@ try:
     '''Tap on the Export Button'''
     try:
         export_btn = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((AppiumBy.ID, 'com.braincraftapps.droid.bgremover:id/share_button'))
+            EC.element_to_be_clickable((AppiumBy.ID, 'com._______.droid.bgremover:id/share_button'))
         )
         export_btn.click()
         print("Successfully Click Export button")
@@ -232,7 +232,7 @@ try:
         # Use a short wait time to quickly check for the dialog
         print("Checking for optional review dialog...")
         review_close_btn = WebDriverWait(driver, 3).until(
-            EC.element_to_be_clickable((AppiumBy.ID, 'com.braincraftapps.droid.bgremover:id/close_button'))
+            EC.element_to_be_clickable((AppiumBy.ID, 'com._______.droid.bgremover:id/close_button'))
         )
         print("Review dialog appeared, closing it.")
         review_close_btn.click()
@@ -243,7 +243,7 @@ try:
     '''Click Save to Gallery button'''
     try:
         save_btn = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((AppiumBy.XPATH, '//android.widget.Button[@resource-id="com.braincraftapps.droid.bgremover:id/save_to_gallery_button"]'))
+            EC.element_to_be_clickable((AppiumBy.XPATH, '//android.widget.Button[@resource-id="com._______.droid.bgremover:id/save_to_gallery_button"]'))
         )
         save_btn.click()
         print("Save To Gallery Button")
@@ -253,7 +253,7 @@ try:
     '''Click Home button'''
     try:
         home_btn = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((AppiumBy.ID, 'com.braincraftapps.droid.bgremover:id/home_button'))
+            EC.element_to_be_clickable((AppiumBy.ID, 'com._______.droid.bgremover:id/home_button'))
         )
         home_btn.click()
         print("Successfully Click Home button")
@@ -264,13 +264,13 @@ try:
     print("Closing button to close the App...")
     try:
         close_btn = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((AppiumBy.ID, 'com.braincraftapps.droid.bgremover:id/close_button'))
+            EC.element_to_be_clickable((AppiumBy.ID, 'com._______.droid.bgremover:id/close_button'))
         )
         close_btn.click()
         print("First tap done")
         time.sleep(1)
         close_btn = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((AppiumBy.ID, 'com.braincraftapps.droid.bgremover:id/close_button'))
+            EC.element_to_be_clickable((AppiumBy.ID, 'com._______.droid.bgremover:id/close_button'))
         )
         close_btn.click()
         print("App closed successfully")
